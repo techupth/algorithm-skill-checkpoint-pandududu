@@ -8,4 +8,10 @@
 // palindrome("abba") === true
 // palindrome("abcdefg") === false
 
-export const palindrome = (str) => {};
+export const palindrome = (str) => {
+  const word = str.replace(/[^a-zA-z0-9]/g, "");
+  return word === word.split("").reverse().join("");
+};
+
+console.log(palindrome("abba"));
+console.log(palindrome("abcdefg"));
